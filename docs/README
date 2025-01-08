@@ -1,8 +1,13 @@
 OPML RELAX NG Schema
-Copyright (c) Tom Morris 2008.
 
-No longer maintained. Feel free to have a look at
-https://github.com/gemmaro/opml-schema for continued efforts to develop this.
+Copyright (c) Tom Morris 2008.
+Copyright (c) gemmaro    2025.
+
+This schema was initially created by Tom Morris and will continue to be
+maintained by gemmaro.
+
+- https://github.com/tommorris/opml-schema
+- https://github.com/gemmaro/opml-schema
 
 Released under the GNU General Public License
 See COPYING or http://www.gnu.org/copyleft/gpl.html
