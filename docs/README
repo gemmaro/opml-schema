@@ -9,8 +9,9 @@ maintained by gemmaro.
 - https://github.com/tommorris/opml-schema
 - https://github.com/gemmaro/opml-schema
 
-Released under the GNU General Public License
-See COPYING or http://www.gnu.org/copyleft/gpl.html
+Released under the GNU General Public License, either version 3 of the
+License, or (at your option) any later version.  See COPYING or
+https://www.gnu.org/licenses/gpl-3.0.html
 
 The purpose of this RELAX NG schema was to try and provide a computer-readable
 and validatable guide to the OPML 1.0 and 2.0 specifications as defined at
