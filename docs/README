@@ -9,10 +9,10 @@ See COPYING or http://www.gnu.org/copyleft/gpl.html
 
 The purpose of this RELAX NG schema was to try and provide a computer-readable
 and validatable guide to the OPML 1.0 and 2.0 specifications as defined at
-www.opml.org:
+opml.org:
 
-- OPML 2.0 - http://opml.org/spec2
-- OPML 1.0 - http://opml.org/spec
+- OPML 2.0 - https://opml.org/spec2.opml
+- OPML 1.0 - http://2005.opml.org/spec1.html
 
 The specifications upon which the schema is based are copyright to UserLand
 Software, Inc. and Scripting News, Inc. See the specification pages above for
