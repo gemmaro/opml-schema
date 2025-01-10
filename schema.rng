@@ -232,6 +232,12 @@
       </attribute>
     </optional>
     <optional>
+      <attribute name="description">
+        <a:documentation xml:lang="en">Top-level description element from the feed.</a:documentation>
+        <text/>
+      </attribute>
+    </optional>
+    <optional>
       <attribute name="htmlUrl">
         <a:documentation xml:lang="en">The top-level link element from the RSS feed.</a:documentation>
         <data type="anyURI"/>
