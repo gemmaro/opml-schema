@@ -1,6 +1,6 @@
 require 'rake/testtask'
 
-task :default => [:build]
+task :default => [:build, :test]
 
 desc "Builds OPML specification file"
 task :build do
