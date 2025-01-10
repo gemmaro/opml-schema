@@ -19,7 +19,9 @@
           </attribute>
           <ref name="head"/>
           <element name="body">
-            <ref name="onode1"/>
+            <oneOrMore>
+              <ref name="onode1"/>
+            </oneOrMore>
           </element>
         </group>
         <group>
