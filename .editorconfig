@@ -1,2 +1,5 @@
 [*.opml]
 indent_style = tab
+
+[*.xsl]
+indent_size = 4
