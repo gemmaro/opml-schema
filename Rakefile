@@ -8,3 +8,7 @@ task :build do
 end
 
 Rake::TestTask.new { |t| t.test_files = FileList["tests/opml_test.rb"] }
+
+file "schema.rnc" => "schema.rng" do |t|
+  sh "trang", "-I", "rng", "-O", "rnc", t.source, t.name
+end
