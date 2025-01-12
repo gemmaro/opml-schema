@@ -8,7 +8,10 @@ task :build do
   sh "xsltproc specgen.xsl schema.rng > spec.html"
 end
 
-Rake::TestTask.new { |t| t.test_files = FileList["tests/opml_test.rb"] }
+Rake::TestTask.new do |t|
+  t.test_files = FileList["tests/opml_test.rb"]
+  t.deps << "schemaex.rng"
+end
 
 file "schema.rnc" => "schema.rng" do |t|
   sh "trang", "-I", "rng", "-O", "rnc", t.source, t.name
