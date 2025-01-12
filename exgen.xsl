@@ -45,10 +45,7 @@
         <optional>
             <attribute name="flNumberedSubs">
                 <a:documentation>Used in the OPML 2.0 Spec (http://opml.org/spec2.opml?format=opml).</a:documentation>
-                <choice>
-                    <value type="string">true</value>
-                    <value type="string">false</value>
-                </choice>
+                <data type="boolean"/>
             </attribute>
         </optional>
     </xsl:template>

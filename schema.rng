@@ -133,19 +133,13 @@
     <optional>
       <attribute name="isComment">
         <a:documentation xml:lang="en">Indicates whether the outline is commented or not. By convention if an outline is commented, all subordinate outlines are considered to also be commented. If it's not present, the value is false.</a:documentation>
-        <choice>
-          <value type="string">true</value>
-          <value type="string">false</value>
-        </choice>
+        <data type="boolean"/>
       </attribute>      
     </optional>
     <optional>
       <attribute name="isBreakpoint">
         <a:documentation xml:lang="en">Indicates whether a breakpoint is set on this outline. This attribute is mainly necessary for outlines used to edit scripts. If it's not present, the value is false.</a:documentation>
-        <choice>
-          <value type="string">true</value>
-          <value type="string">false</value>
-        </choice>
+        <data type="boolean"/>
       </attribute>
     </optional>
     <optional>
