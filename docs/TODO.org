@@ -2,3 +2,6 @@
 Nokogiri's RELAX NG detection can sometimes give different results depending
 on the order, number and content of errors.  So, you can't check if it's the
 same.  You can only check if it's not empty.
+* TODO Reduce dependencies
+** TODO Use Nokogiri or REXML instead of xmllint provided by LibXML2
+** TODO Use Nokogiri or REXML instead of xsltproc provided by LibXSLT
