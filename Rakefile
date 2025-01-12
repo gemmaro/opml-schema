@@ -13,9 +13,12 @@ Rake::TestTask.new do |t|
   t.deps << "schemaex.rng"
 end
 
-file "schema.rnc" => "schema.rng" do |t|
-  sh "trang", "-I", "rng", "-O", "rnc", t.source, t.name
+def rng_to_rnc(source, target)
+  sh "trang", "-I", "rng", "-O", "rnc", source, target
 end
+
+file("schema.rnc" => "schema.rng") { |t| rng_to_rnc(t.source, t.name) }
+file("schemaex.rnc" => "schemaex.rng") { |t| rng_to_rnc(t.source, t.name) }
 
 file "schemaex.rng" => ["schema.rng", "exgen.xsl"] do |t|
   source, stylesheet, = t.sources
