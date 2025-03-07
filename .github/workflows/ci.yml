@@ -1,0 +1,43 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '3.4'
+
+    - name: Install dependencies
+      run: |
+        gem install rake
+        sudo apt-get update
+        sudo apt-get install -y trang libxml2 libxslt1-dev
+
+    - name: Run tests
+      run: rake test
+
+    - name: Generate compact schema files
+      run: |
+        rake schema.rnc schemaex.rnc
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: schema-files
+        path: |
+          schema.rnc
+          schemaex.rnc
+          schema.rng
+          schemaex.rng
+          docs/CHANGELOG.md
+          docs/COPYING
+          docs/README
+          docs/UL-SN-DISCLAIMER
