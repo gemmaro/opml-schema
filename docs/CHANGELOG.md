@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.2 - 2025-03-07
+
+- Setup GitHub Action to test and create schema artifacts.
+- Add Rake tasks to generate extra schema in compact syntax.
+
 ## 1.1.1 - 2025-02-08
 
 - Implemented the use of the boolean data type from XML Schema data types to
