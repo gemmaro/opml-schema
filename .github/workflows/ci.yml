@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, pull_request]
+on: pull_request
 
 jobs:
   build:
@@ -13,11 +13,11 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.4'
+        ruby-version: '3.1'
 
     - name: Install dependencies
       run: |
-        gem install rake
+        bundle
         sudo apt-get update
         # libxml2-utils: xmllint
         sudo apt-get install -y trang libxml2-utils xsltproc
@@ -27,7 +27,7 @@ jobs:
 
     - name: Generate compact schema files
       run: |
-        rake schema.rnc schemaex.rnc
+        bundle exec rake schema.rnc schemaex.rnc
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
