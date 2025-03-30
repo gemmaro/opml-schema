@@ -39,6 +39,11 @@
             <div class="name">
                 <xsl:value-of select="@name"/>
             </div>
+            <xsl:if test="a:documentation">
+                <div class="documentation">
+                    <xsl:value-of select="a:documentation" />
+                </div>
+            </xsl:if>
         </li>
     </xsl:template>
 </xsl:stylesheet>
