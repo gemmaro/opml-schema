@@ -5,7 +5,10 @@ task :default => [:build, :test]
 
 desc "Builds OPML specification file"
 task :build do
-  sh "xsltproc specgen.xsl schema.rng > spec.html"
+  sh "xsltproc", "--output", "spec.tmp.html",
+     "specgen.xsl",
+     "schema.rng"
+  File.write("spec.html", "<!doctype html>#{File.read("spec.tmp.html")}")
 end
 
 Rake::TestTask.new do |t|
